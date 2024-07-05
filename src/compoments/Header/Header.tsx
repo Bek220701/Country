@@ -1,5 +1,6 @@
 import scss from "./Header.module.scss";
 import world from "../../assets/img/2560px-World_Airways_Logo.svg.png";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div id={scss.header}>
@@ -7,12 +8,9 @@ const Header = () => {
         <div className={scss.header}>
           <img src={world} width={250} alt="img" />
           <div className={scss.nav}>
-            <a>ASIA</a>
-            <a>EUROPA</a>
-            <a>AMERICA</a>
-            <a>OCEANIA</a>
-            <a>ANTARTIC</a>
-            <a>AFRICA</a>
+            <NavLink to={"/"}>FILM</NavLink>
+            <NavLink to={"/cinema"}>CINEMA</NavLink>
+            <NavLink to={"/world"}>WORLD</NavLink>
           </div>
           <div className={scss.inp}>
             <input type="text" placeholder="search..." />
